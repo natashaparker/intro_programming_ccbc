@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	/*
-	 *	*** About Me ***
+	 *		*** About Me ***
 	 *		Name: Matthew Verrette
 	 *		Birthday: February 24, 1981
 	 *		Hobbies: Motorcycles, Art, Computers
@@ -23,20 +23,23 @@ public class MainActivity extends Activity {
 	*/
 	
 	// Application OnCreate, appends data to TextView printing to 
-	// Android View when Application is started.
+	// Android View when Application is started. Uses StringBuider
+	// to concatenate About Me String.
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		TextView tv = (TextView) findViewById(R.id.about_me);
-		tv.append("*** About Me ***\n");
-		tv.append("Name: Matthew Verrette\n");
-		tv.append("Birthday: February 24, 1981\n");
-		tv.append("Hobbies: Motorcycles, Art, Computers\n");
-		tv.append("Favorite Book: The Girl with the Dragon Tattoo\n");
-		tv.append("Favorite Movie: Blade Runner\n");
-		
+		StringBuilder sb = new StringBuilder();
+		sb.append("*** About Me ***\n");
+		sb.append("Name: Matthew Verrette\n");
+		sb.append("Birthday: February 24, 1981\n");
+		sb.append("Hobbies: Motorcycles, Art, Computers\n");
+		sb.append("Favorite Book: The Girl with the Dragon Tattoo\n");
+		sb.append("Favorite Movie: Blade Runner\n");
+		String aboutMe = sb.toString();
+		tv.setText(aboutMe);
 	}
 
 	@Override
