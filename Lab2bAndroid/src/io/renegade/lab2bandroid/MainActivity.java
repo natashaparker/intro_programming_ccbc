@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 		calculations = (TextView) findViewById(R.id.calculations);
 		calculations.setMovementMethod(new ScrollingMovementMethod());
 		calculations.setText("Calculations:\n");
-		
+		calculations.append("**********************************");
 		
 		calculate.setOnClickListener(new OnClickListener() {
 
@@ -47,7 +47,8 @@ public class MainActivity extends Activity {
 					
 					// Can't divide by 0. Answer is undefined.
 					if (intB == 0) {
-						calculations.append("Division: undefined");
+						calculations.append(String.format("Fraction: %.0f / %.0f\n", intA, intB));
+						calculations.append("Division: undefined\n");
 					} else {
 						
 						calculations.append(String.format("Fraction: %.0f / %.0f\n", intA, intB));
