@@ -52,7 +52,7 @@ public class Lab2b {
 		denominator = getInt(DENOMINATOR);
 		System.out.println(String.format("fraction: %d / %d  ", numerator, denominator));
 		result = (float) numerator / denominator;
-		System.out.println(String.format("Decimal: %f ", result));
+		System.out.println(String.format("Decimal: %.2f ", result));
 
 	}
 

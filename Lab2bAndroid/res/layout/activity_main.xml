@@ -9,25 +9,36 @@
     tools:context=".MainActivity" >
 
     <EditText
-        android:id="@+id/firstFloat"
+        android:id="@+id/firstInt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
         android:ems="10"
+       	android:hint="@string/numerator"
         android:inputType="text"
-        android:hint="@string/hint">
+        >
+
         <requestFocus />
     </EditText>
+    
+        <EditText
+        android:id="@+id/secondInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/firstInt"
+        android:layout_below="@+id/firstInt"
+        android:ems="10"
+        android:hint="@string/denominator" />
 
     <TextView
         android:id="@+id/calculations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/secondFloat"
-        android:layout_alignRight="@+id/secondFloat"
-        android:layout_below="@+id/secondFloat"
+        android:layout_alignLeft="@+id/secondInt"
+        android:layout_alignRight="@+id/secondInt"
+        android:layout_below="@+id/secondInt"
         android:layout_above="@+id/calculate"
         android:layout_marginTop="25dp"
         android:maxLines = "256"
@@ -41,15 +52,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="22dp"
-        android:text="Calculate" />
-
-    <EditText
-        android:id="@+id/secondFloat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/firstFloat"
-        android:layout_below="@+id/firstFloat"
-        android:ems="10"
-        android:inputType="text" />
+        android:text="@string/calculate" />
 
 </RelativeLayout>

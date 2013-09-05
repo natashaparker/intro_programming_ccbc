@@ -1,4 +1,4 @@
-package io.renegade.lab2aandroid;
+package io.renegade.lab2bandroid;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-	
+
 	EditText firstNumber;
 	EditText secondNumber;
 	TextView calculations;
@@ -24,8 +24,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		firstNumber = (EditText) findViewById(R.id.firstFloat);
-		secondNumber = (EditText) findViewById(R.id.secondFloat);
+		firstNumber = (EditText) findViewById(R.id.firstInt);
+		secondNumber = (EditText) findViewById(R.id.secondInt);
 		Button calculate = (Button) findViewById(R.id.calculate);
 		calculations = (TextView) findViewById(R.id.calculations);
 		calculations.setMovementMethod(new ScrollingMovementMethod());
@@ -42,22 +42,17 @@ public class MainActivity extends Activity {
 				
 				
 				try {
-					float floatA = Integer.parseInt(valA);
-					float floatB = Integer.parseInt(valB);
-					
-					calculations.append(String.format("Addition: %f\n", 
-							floatA + floatB));
-					calculations.append(String.format("Subtraction: %f\n", 
-							floatA - floatB));
-					calculations.append(String.format("Multiplication: %f\n", 
-							floatA * floatB));
+					float intA = Float.parseFloat(valA);
+					float intB = Float.parseFloat(valB);
 					
 					// Can't divide by 0. Answer is undefined.
-					if (floatB == 0) {
+					if (intB == 0) {
 						calculations.append("Division: undefined");
 					} else {
-						calculations.append(String.format("Division: %f\n", 
-								floatA / floatB));
+						
+						calculations.append(String.format("Fraction: %.0f / %.0f\n", intA, intB));
+						calculations.append(String.format("Decimal: %.2f\n", 
+								intA / intB));
 					}
 					calculations.append("**********************************");
 					
@@ -70,7 +65,6 @@ public class MainActivity extends Activity {
 		
 		
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

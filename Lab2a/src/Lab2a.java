@@ -39,13 +39,13 @@ public class Lab2a {
 		firstFloat = getFloat();
 		secondFloat = getFloat();
 		
-		System.out.println(String.format("Addition: %f + %f = %f ", firstFloat, secondFloat, 
+		System.out.println(String.format("Addition: %.2f + %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat + secondFloat));
 		
-		System.out.println(String.format("Subtraction: %f - %f = %f ", firstFloat, secondFloat, 
+		System.out.println(String.format("Subtraction: %.2f - %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat - secondFloat));
 		
-		System.out.println(String.format("Multiplication: %f * %f = %f ", firstFloat, secondFloat, 
+		System.out.println(String.format("Multiplication: %.2f * %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat * secondFloat));
 		
 		// Verifies that Denominator isn't 0. This results in an undefined answer.
@@ -53,7 +53,7 @@ public class Lab2a {
 		if (secondFloat == 0) {
 			System.out.println("Division: Denominator Can't be 0, result undefined");
 		} else {
-			System.out.println(String.format("Division: %f / %f = %f ", firstFloat, secondFloat, 
+			System.out.println(String.format("Division: %.2f / %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat / secondFloat));
 		}
 	}
