@@ -15,6 +15,10 @@ import android.widget.TextView;
 //************************************************************
 
 public class MainActivity extends Activity {
+	
+	//--------------------------------------------------------
+	//  Prints a presidential quote on startup of Application.
+	//--------------------------------------------------------
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
