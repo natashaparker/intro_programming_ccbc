@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 /**
- * 
- */
-
-/**
  * @author Matthew Verrette					Lab2b.java
  * Introduction to Programming				Prof. Cross
  *
