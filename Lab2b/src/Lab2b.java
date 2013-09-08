@@ -5,14 +5,26 @@ import java.util.Scanner;
  */
 
 /**
- * @author developer
+ * @author Matthew Verrette					Lab2b.java
+ * Introduction to Programming				Prof. Cross
  *
+ * Prompts the user for a numerator and denominator 
+ * of a fractions and displays the decimal equivalent
+ * to the user.
  */
+
+
 public class Lab2b {
+	
+	// Passed to getInt, allows function to check that
+	// denominator is not 0
 	
 	final static int NUMERATOR = 0;
 	final static int DENOMINATOR = 1;
 
+	// Gets user input and verifies that user
+	// has entered an integer.
+	
 	public static int getInt(int type) {	
 		int mNumber = 0;
 		Scanner sc = new Scanner(System.in);
@@ -20,10 +32,14 @@ public class Lab2b {
 		while (sc.hasNextLine()) {
 			if (sc.hasNextInt()) {
 				mNumber = sc.nextInt();
+				
+				// Verifies that denominator is not 0
+				// If denominator is 0 result is undefined
+				
 				if (mNumber == 0 && type == DENOMINATOR) {
 					System.out.println("Invalid Input");
-					mNumber = getInt(DENOMINATOR);
-					return mNumber;
+					System.out.println("Denominator cannot be 0");
+					mNumber = getInt(DENOMINATOR);	
 				}
 				return mNumber;
 			} else {
@@ -39,8 +55,11 @@ public class Lab2b {
 	/**
 	 * @param args
 	 */
+	
+	// Gets two floats from user and divides them.
+	// Displays the result in fraction and decimal
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int numerator;
 		int denominator;

@@ -1,18 +1,22 @@
 import java.util.Scanner;
 
 /**
- * 
- */
-
-/**
- * @author developer
+ * @author Matthew Verrette					Lab2a.java
+ * Introduction to Programming				Prof. Cross
  *
+ * reads two floating point numbers from user,
+ * calculates their sums, differences, and products
+ * and displays the results to the user 
  */
 public class Lab2a {
 
 	/**
 	 * @param args
 	 */
+	
+	
+	// Gets user input and verifies that it is valid.
+	// Valid input is a float
 	
 	public static float getFloat() {	
 		float mNumber = 0;
@@ -31,6 +35,8 @@ public class Lab2a {
 		return mNumber;
 	}
 	
+	// Gets two floats and displays arithmetic operations
+	
 	public static void main(String[] args) {
 		
 		float firstFloat;
@@ -48,7 +54,7 @@ public class Lab2a {
 		System.out.println(String.format("Multiplication: %.2f * %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat * secondFloat));
 		
-		// Verifies that Denominator isn't 0. This results in an undefined answer.
+		// Verifies that Denominator isn't 0. This results in an undefined answer and is invalid.
 		
 		if (secondFloat == 0) {
 			System.out.println("Division: Denominator Can't be 0, result undefined");
