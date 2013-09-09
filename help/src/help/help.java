@@ -27,7 +27,4 @@ public class help {
 	System.out.println("Difference: " + difference);
 	System.out.println("Product: " + product);
 	}
-
-	
-
 }
