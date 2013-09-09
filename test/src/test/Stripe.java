@@ -18,9 +18,9 @@ public class Stripe {
 	}
 	
 	void display() {
-		float red = parent.random(0, 50);
-		float green = parent.random(0, 50);
-		float blue = parent.random(0, 50);
+		float red = parent.random(128, 255);
+		float green = parent.random(128, 255);
+		float blue = parent.random(128, 255);
 		parent.fill(red, blue, green);
 		parent.noStroke();
 		parent.rect(x, 0, w, parent.height);
