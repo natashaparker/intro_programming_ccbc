@@ -35,6 +35,12 @@ public class Lab2a {
 		return mNumber;
 	}
 	
+	public static float sum(float x, float y) {
+		float sum;
+		sum = x + y;
+		return sum;
+	}
+	
 	// Gets two floats and displays arithmetic operations
 	
 	public static void main(String[] args) {
@@ -45,8 +51,11 @@ public class Lab2a {
 		firstFloat = getFloat();
 		secondFloat = getFloat();
 		
+		MyMath mMath = new MyMath();
+		
+		
 		System.out.println(String.format("Addition: %.2f + %.2f = %.2f ", firstFloat, secondFloat, 
-				firstFloat + secondFloat));
+				mMath.sum(firstFloat, secondFloat)));
 		
 		System.out.println(String.format("Subtraction: %.2f - %.2f = %.2f ", firstFloat, secondFloat, 
 				firstFloat - secondFloat));
