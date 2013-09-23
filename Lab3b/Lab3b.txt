@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+/**
+ * @author Matthew Verrette				Lab3b.java
+ * 
+ * Professor Cross						Introduction to Programming
+ *
+ * Prompts the user for two integers and prints the sum of cubes
+ * 
+ */
+
+public class Lab3b {
+
+	/**
+	 * Gets user input and verifies that user
+	 * has entered an integer.
+	 */
+	
+	public static int getValidInt() {	
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter an Integer: ");
+		if (sc.hasNextInt()) {
+			return sc.nextInt();
+		} else {
+			System.out.println("Invalid Input");
+			return getValidInt();
+		}
+	}
+	
+	/**
+	 * Calculates the cube of two integers
+	 * prints result to standard output
+	 */
+	
+	public static void main(String[] args) {
+		
+		int value_x;
+		int value_y;
+		double result;
+		
+		System.out.println("Calculates the sum of two cubes");
+		System.out.println("Enter two integers.");
+		value_x = getValidInt();
+		value_y = getValidInt();
+		result = Math.pow(value_x, 3) + Math.pow(value_y, 3);
+		System.out.println(String.format("%d^3 + %d^3 = %.0f", 
+				value_x, value_y, result ));
+	}
+
+}
