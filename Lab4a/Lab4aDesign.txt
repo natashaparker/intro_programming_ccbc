@@ -1,0 +1,24 @@
+Matthew Verrette
+Intro to Programming
+Professor Cross
+Lab4a Design
+
+Specification
+	Design and implement and application that reads a string from the user and prints it one character per line.
+
+Input
+	String my_string
+
+Processes
+
+	DO
+		Get user inputted string from standard input
+		store user input in my_string
+	WHILE
+		my_string is not equal to 0
+
+	FOR counter is less than the length of my_string
+		Iterate through string
+
+Output
+		Display each character of string to standard output 

@@ -1,0 +1,37 @@
+Matthew Verrette
+Intro to Programming
+Professor Cross
+Lab4b Design
+
+Specification
+	Design and implement an application that reads a string from the user and then determines and prints how many of each lowercase vowel (a, e, i, o, and u) appear in the entire string. Have a separate counter for each vowel. Also count and print the number of non vowel characters.
+
+Input
+	String my_string
+
+Processes
+	DO
+		Get user inputted string from standard input
+		store user input in my_string
+	WHILE
+		my_string is not equal to 0
+
+	FOR counter is less than the length of my_string
+		Iterate through string
+		compare each character to vowel
+		IF character equals 'a'
+			increment cnt_a
+		IF character equals 'e'
+			increment cnt_e
+		IF character equals 'i'
+			Increment cnt_i
+		IF character equals 'o'
+			increment cnt_o
+		IF character equals 'u'
+			increment cnt_u
+		ELSE
+			Verify character is not space
+			increment cnt_non_vowel
+Output
+	Display Count for each variable to standard output
+	Display count for non-vowel characters
