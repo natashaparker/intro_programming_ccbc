@@ -60,7 +60,7 @@ public class Lab4b {
 			} while (response.length() == 0);
 		} while (my_string.length() == 0);
 
-		// Counts vowles and other characters
+		// Counts vowels and other characters
 		
 		for (int i = 0; i < my_string.length(); i++ ) {
 			switch(my_string.charAt(i)) {
