@@ -1,6 +1,6 @@
 
 /**
- * @author Matthew Verrette				Lab4b.java
+ * @author Matthew Verrette				Lab5a.java
  * 
  * Professor Cross						Introduction to Programming
  * 
@@ -18,16 +18,25 @@
 
 public class Kennel {
 	
+	// Instantiates and updates multiple dog objects
+	
 	public static void main(String[] args) {
 		Dog dog1 = new Dog("belle", 10);
 		Dog dog2 = new Dog("Ralph", 3);
 		Dog dog3 = new Dog("Spike", 1);
 		Dog dog4 = new Dog("Pete", 5);
 		
-		dog3.setName("jack");
+		System.out.println("Before Modification");
+		System.out.println(dog1.toString());
+		System.out.println(dog2.toString());
+		System.out.println(dog3.toString());
+		System.out.println(dog4.toString());
+		
+		dog3.setName("Jack");
 		dog1.setAge(8);
 		dog2.setAge(4);
 		
+		System.out.println("\nAfter Modification");
 		System.out.println(dog1.toString());
 		System.out.println(dog2.toString());
 		System.out.println(dog3.toString());
